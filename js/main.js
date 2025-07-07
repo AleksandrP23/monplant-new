@@ -10643,12 +10643,11 @@ class TransferElements{constructor(...e){if(0===e.length)throw TypeError("at lea
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_gallery_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/gallery.js */ "./src/js/components/gallery.js");
 /* harmony import */ var _components_slider_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/slider.js */ "./src/js/components/slider.js");
-/* harmony import */ var _components_search_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/search.js */ "./src/js/components/search.js");
-/* harmony import */ var _components_video_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/video.js */ "./src/js/components/video.js");
-/* harmony import */ var _components_transfer_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/transfer.js */ "./src/js/components/transfer.js");
+/* harmony import */ var _components_video_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/video.js */ "./src/js/components/video.js");
+/* harmony import */ var _components_transfer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/transfer.js */ "./src/js/components/transfer.js");
 
 
-
+// import './components/search.js';
 
 
 
@@ -10664,196 +10663,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var fslightbox__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! fslightbox */ "./node_modules/fslightbox/index.js");
 
-
-/***/ }),
-
-/***/ "./src/js/components/search.js":
-/*!*************************************!*\
-  !*** ./src/js/components/search.js ***!
-  \*************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// document.addEventListener('DOMContentLoaded', function () {
-//   const search = document.querySelector('.search');
-//   const btn = search.querySelector('.search__btn');
-//   const tooltip = search.querySelector('.search__tooltip');
-//   const input = search.querySelector('.search__input');
-//   const close = search.querySelector('.search__close');
-//   const resultsList = search.querySelector('.search__results');
-
-//   // Показ тултипа
-//   btn.addEventListener('click', function (e) {
-//     e.stopPropagation();
-//     tooltip.style.display = 'block';
-//     input.focus();
-//   });
-
-//   // Закрытие тултипа
-//   close.addEventListener('click', function (e) {
-//     e.stopPropagation();
-//     tooltip.style.display = 'none';
-//     resultsList.style.display = 'none';
-//   });
-
-//   // Закрытие при клике вне поиска
-//   document.addEventListener('click', function (e) {
-//     if (!e.target.closest('.search')) {
-//       tooltip.style.display = 'none';
-//       resultsList.style.display = 'none';
-//     }
-//   });
-
-//   // Дебаунс для запроса
-//   let debounceTimer;
-//   input.addEventListener('input', function () {
-//     clearTimeout(debounceTimer);
-//     const query = input.value.trim();
-
-//     debounceTimer = setTimeout(() => {
-//       if (query.length >= 3) {
-//         const request = {
-//           search_branches: 42,
-//           search_types: "56,30",
-//           search_string: query,
-//           per_page: 10
-//         };
-
-//         searchRequest(request, (result) => {
-//           const items = Object.values(result?.items?.item || {});
-//           resultsList.innerHTML = '';
-
-//           if (items.length) {
-//             items.forEach(item => {
-//               const li = document.createElement('li');
-//               li.innerHTML = `<a href="${item.link}">${item.name}</a>`;
-//               resultsList.appendChild(li);
-//             });
-//           } else {
-//             resultsList.innerHTML = '<li>Ничего не найдено</li>';
-//           }
-
-//           resultsList.style.display = 'block';
-//         });
-//       } else if (query.length > 0) {
-//         resultsList.innerHTML = '<li>Продолжайте ввод ...</li>';
-//         resultsList.style.display = 'block';
-//       } else {
-//         resultsList.style.display = 'none';
-//       }
-//     }, 300); // debounce 300ms
-//   });
-
-//   function searchRequest(data, callback) {
-//     $.ajax({
-//       url: '/udata://search/search_do/.json',
-//       type: 'get',
-//       dataType: 'json',
-//       data,
-//       success: callback,
-//       error: (err) => {
-//         console.error(err);
-//         alert("При выполнении запроса возникла ошибка.");
-//       }
-//     });
-//   }
-// });
-
-document.addEventListener('DOMContentLoaded', function () {
-  const header = document.querySelector('.header'); // важен для скрытия меню
-  const searchIcon = document.querySelector('.search-icon');
-  const tooltip = searchIcon.querySelector('.search-icon__tooltip');
-  const input = tooltip.querySelector('.search-icon__input');
-  const closeBtn = tooltip.querySelector('.search-icon__close');
-  const resultsList = tooltip.querySelector('.search-icon__results');
-  const defaultSearchRequest = {
-    search_branches: 42,
-    search_types: "56,30",
-    search_string: "",
-    per_page: 10
-  };
-
-  // Открытие поиска
-  searchIcon.querySelector('.search-icon__btn').addEventListener('click', e => {
-    e.stopPropagation();
-    tooltip.classList.add('active');
-    header.classList.add('search-open'); // скрываем пункты меню
-    input.focus();
-  });
-
-  // Закрытие поиска
-  closeBtn.addEventListener('click', e => {
-    e.stopPropagation();
-    tooltip.classList.remove('active');
-    header.classList.remove('search-open');
-    resultsList.style.display = 'none';
-  });
-
-  // Клик вне области — закрыть
-  document.addEventListener('click', e => {
-    if (!e.target.closest('.search-icon')) {
-      tooltip.classList.remove('active');
-      header.classList.remove('search-open');
-      resultsList.style.display = 'none';
-    }
-  });
-
-  // ESC закрывает поиск
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      tooltip.classList.remove('active');
-      header.classList.remove('search-open');
-      resultsList.style.display = 'none';
-    }
-  });
-
-  // Обработка ввода
-  let debounceTimer;
-  input.addEventListener('input', function () {
-    clearTimeout(debounceTimer);
-    const query = input.value.trim();
-    debounceTimer = setTimeout(() => {
-      if (query.length >= 3) {
-        searchRequest({
-          ...defaultSearchRequest,
-          search_string: query
-        }, result => {
-          const items = Object.values(result?.items?.item || {});
-          resultsList.innerHTML = '';
-          if (items.length) {
-            items.forEach(item => {
-              const li = document.createElement('li');
-              li.innerHTML = `<a href="${item.link}">${item.name}</a>`;
-              resultsList.appendChild(li);
-            });
-          } else {
-            resultsList.innerHTML = '<li>Ничего не найдено</li>';
-          }
-          resultsList.style.display = 'block';
-        });
-      } else if (query.length > 0) {
-        resultsList.innerHTML = '<li>Продолжайте ввод ...</li>';
-        resultsList.style.display = 'block';
-      } else {
-        resultsList.style.display = 'none';
-      }
-    }, 300);
-  });
-  function searchRequest(data, callback) {
-    $.ajax({
-      url: '/udata://search/search_do/.json',
-      type: 'get',
-      dataType: 'json',
-      data,
-      success: callback,
-      error: err => {
-        console.error(err);
-        alert("При выполнении запроса возникла ошибка.");
-      }
-    });
-  }
-});
 
 /***/ }),
 
@@ -10930,14 +10739,17 @@ if (document.querySelector('.market-slider')) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var transfer_elements__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! transfer-elements */ "./node_modules/transfer-elements/dist/transfer-elements.esm.min.js");
 
-new transfer_elements__WEBPACK_IMPORTED_MODULE_0__["default"]({
-  sourceElement: document.querySelector('.slide-video'),
-  breakpoints: {
-    650: {
-      targetElement: document.querySelector('.market__inn')
+const sourceElement = document.querySelector('.slide-video');
+if (sourceElement) {
+  new transfer_elements__WEBPACK_IMPORTED_MODULE_0__["default"]({
+    sourceElement: document.querySelector('.slide-video'),
+    breakpoints: {
+      650: {
+        targetElement: document.querySelector('.market__inn')
+      }
     }
-  }
-});
+  });
+}
 
 /***/ }),
 
