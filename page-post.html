@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>MaxGraph New Site</title>
+  <link rel="preload" href="fonts/AcromBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/AcromMedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/AcromRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/MontserratMedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/MontserratRegular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <!-- <header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <svg class="header__logo">
+        <use xlink:href="img/sprite.svg#logo"></use>
+      </svg>
+      <ul class="list-reset header__page-list">
+        <li class="header__page-item">
+          <a href="#" class="header__page-link">про алоказию</a>
+        </li>
+        <li class="header__page-item header__page-item--active">
+          <a href="#" class="header__page-link">купить алоказию</a>
+        </li>
+      </ul>
+      <nav class="nav">
+        <ul class="list-reset nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">пункт меню</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">пункт меню</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">пункт меню</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">пункт меню</a></li>
+        </ul>
+      </nav>
+      <div class="header__search">
+        <div class="search-icon">
+          <button class="btn-reset search-icon__btn">
+            <svg class="search-icon__svg">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </button>
+          <div class="search-icon__tooltip">
+            <input type="text" class="input-reset search-icon__input" placeholder="Поиск">
+            <button class="btn-reset search-icon__close"></button>
+            <ul class="search-icon__results"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="social header__social">
+        <ul class="list-reset social__list">
+          <li class="social__item">
+            <a href="#" target="_blank" class="social__link social__link--tg" aria-label="Телеграм"></a>
+          </li>
+          <li class="social__item">
+            <a href="#" target="_blank" class="social__link social__link--wa" aria-label="Ватсап"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header> -->
+
+    <main class="main article-page">
+      <header class="article-page__header">
+  <div class="container">
+    <h1 class="title article-page__title">Заголовок</h1>
+    <div class="article-page__meta">
+      <div class="article-page__meta-item">
+        <span>время прочтения</span> · <time datetime="2022-01-19">19.01.2022</time>
+      </div>
+      <div class="article-page__meta-item">
+        <span>Фио и должность автора</span>
+      </div>
+      <div class="article-page__meta-item">
+        <time datetime="2022-01-19">19.01.2022</time>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="container article-page__container">
+        <article class="article-page__inner">
+          <section class="section-text section-pb article__intro">
+  <p>Лазерный станок для домашней мастерской помогает создавать изделия даже дома. На современном оборудовании
+    обрабатывают различные виды материала:</p>
+  <ul>
+    <li>бумагу;</li>
+    <li>текстиль;</li>
+    <li>акрил.</li>
+  </ul>
+  <p>
+    Кратко опишем принцип работы. CO2 лазеры излучают инфракрасный свет на длине волны 10,6 мкм. Лазерный луч
+    формируется в газоразрядном аппарате, заполненном смесью углекислого газа, азота, водорода и гелия.
+  </p>
+  <p>При прохождении электрического тока через эту газовую смесь молекулы CO2 излучают энергию в виде лазерного луча.
+    Этот луч затем фокусируется с помощью оптических линз и направляется на обрабатываемый объект.
+  </p>
+</section>
+
+          <section class="section-text section-pb article__gallery">
+  <h2>Галерея</h2>
+  <div class="gallery-slider__btns">
+    <button class="btn-reset gallery-slider__btn gallery-slider__prev">
+      <svg>
+        <use xlink:href="img/sprite.svg#left-arrow"></use>
+      </svg>
+    </button>
+    <div class="swiper-pagination gallery-slider__pag"></div>
+    <button class="btn-reset gallery-slider__btn gallery-slider__next">
+      <svg>
+        <use xlink:href="img/sprite.svg#right-arrow"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="swiper gallery-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <a data-fslightbox href="./img/slider.png">
+          <img src="./img/slider.png" alt="Image">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a data-fslightbox href="./img/slider.png">
+          <img src="./img/slider.png" alt="Image">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a data-fslightbox href="./img/slider.png">
+          <img src="./img/slider.png" alt="Image">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+          <section class="section-text section-pb article__note">
+  <div class="note">
+    <span class="note__warning">!</span>
+    <div class="note__text">
+      В нашем каталоге вы сможете выбрать контроллер, наиболее подходящий под ваши требования.
+    </div>
+  </div>
+</section>
+
+          <section class="section-text section-pb article__video">
+  <h2>Замиакулькас Зензи 15 см</h2>
+  <div class="video" data-video="https://www.youtube.com/embed/cZlGnb6gMJA">
+    <img class="video__thumbnail" src="img/video-preview.png" aria-hidden="true" decoding="async" loading="lazy" alt="">
+    <button class="video__play" aria-label="Запустить видео">
+      <svg fill="#fff" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60" xml:space="preserve">
+        <g>
+          <path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
+            c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15
+            C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z" />
+          <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+            S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z" />
+        </g>
+      </svg>
+    </button>
+  </div>
+</section>
+
+          <section class="section-text section-pb article__environment">
+  <h2>Подходящее помещение</h2>
+  <p>При установке лазерного ЧПУ станка для домашней мастерской важно обеспечить не только безопасность, но и эффективность работы. Помимо технических характеристик станка, важно обратить внимание на условия размещения:</p>
+  <ul>
+    <li><strong>Подходящее помещение:</strong> если места не так много, можно выбрать небольшой станок, например, настольный Wattsan 0203 Micro с рабочим полем 200×300 мм и весом всего 38 кг. Но не стоит забывать, что помимо оборудования нужно выделить место под материалы, заготовки и инструменты.</li>
+    <li><strong>Хорошая вентиляция:</strong> отвод дыма и паров, образующихся при резке, необходим для сохранения чистоты воздуха и безопасности оператора.</li>
+    <li><strong>Стабильное электроснабжение:</strong> например, Wattsan 0503 потребляет 1000 Вт. Чтобы станок работал без перебоев, электропитание должно быть 220 В, частотой 50 Гц.</li>
+  </ul>
+</section>
+
+          <section class="section-text section-table section-pb article__table">
+  <h2>Услуги</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Услуга</th>
+        <th>Стоимость</th>
+        <th>Время</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Винтэссенцию победы маркетинга над разумом и должны быть превращены</td>
+        <td>1 000 ₽</td>
+        <td>3 часа</td>
+      </tr>
+      <tr>
+        <td>Некоторые особенности внутренней политики</td>
+        <td>1 000 ₽</td>
+        <td>3 часа</td>
+      </tr>
+      <tr>
+        <td>Винтэссенцию победы маркетинга над разумом и должны быть превращены</td>
+        <td>1 000 ₽</td>
+        <td>3 часа</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    С учётом сложившейся международной обстановки, внедрение современных методик, в своём классическом представлении,
+    допускает внедрение благоприятных перспектив. Каждый из нас понимает очевидную вещь: глубокий уровень погружения
+    требует анализа анализа существующих паттернов поведения.
+  </p>
+  <p>
+    Значимость этих проблем настолько очевидна, что понимание сути ресурсосберегающих технологий однозначно фиксирует
+    необходимость модели развития. С другой стороны, семантический разбор внешних противодействий влечёт за собой
+    процесс
+    внедрения и модернизации экономической целесообразности принимаемых решений.
+  </p>
+</section>
+
+          <section class="section-text section-pb article__conclusion">
+  <h2>Заключение</h2>
+  <p>С учётом сложившейся международной обстановки, внедрение современных методик, в своём классическом представлении, допускает внедрение благоприятных перспектив. Каждый из нас понимает очевидную вещь: глубокий уровень погружения требует анализа анализа существующих паттернов поведения. </p>
+  <p>Значимость этих проблем настолько очевидна, что понимание сути ресурсосберегающих технологий однозначно фиксирует необходимость модели развития. С другой стороны, семантический разбор внешних противодействий влечёт за собой процесс внедрения и модернизации экономической целесообразности принимаемых решений.</p>
+</section>
+
+        </article>
+
+        <aside class="article-page__sidebar">
+          <nav class="toc">
+            <h3 class="toc__title">Оглавление</h3>
+            <ul class="toc__list">
+              <li><a href="#item-1">Понижение сопротивления</a></li>
+              <li><a href="#item-2">Вводный инструктаж</a></li>
+              <li><a href="#item-3">Когда увольнять не стоит</a></li>
+            </ul>
+          </nav>
+        </aside>
+      </div>
+      <section class="section-pb related">
+  <div class="container">
+    <h2 class="title interested__title">Читайте также</h2>
+    <ul>
+      <li>
+        <img loading="lazy" src="./img/related.png" class="image" width="168" height="100" alt="">
+        <a href="#">План введения в должность нового сотрудника</a>
+      </li>
+     <li>
+        <img loading="lazy" src="./img/related.png" class="image" width="168" height="100" alt="">
+        <a href="#">План введения в должность нового сотрудника</a>
+      </li>
+      <li>
+        <img loading="lazy" src="./img/related.png" class="image" width="168" height="100" alt="">
+        <a href="#">План введения в должность нового сотрудника</a>
+      </li>
+      <li>
+        <img loading="lazy" src="./img/related.png" class="image" width="168" height="100" alt="">
+        <a href="#">План введения в должность нового сотрудника</a>
+      </li>
+      <li>
+        <img loading="lazy" src="./img/related.png" class="image" width="168" height="100" alt="">
+        <a href="#">План введения в должность нового сотрудника</a>
+      </li>
+      <li>
+        <img loading="lazy" src="./img/related.png" class="image" width="168" height="100" alt="">
+        <a href="#">План введения в должность нового сотрудника</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="section-padding interested">
+  <div class="container">
+    <h2 class="title interested__title">Часто интересуются:</h2>
+    <div class="tags">
+      <a href="#" class="tags__link">Как ухаживать за алоказиями</a>
+      <a href="#" class="tags__link">Как ухаживать за алоказиями</a>
+      <a href="#" class="tags__link">Как поливать алоказию</a>
+      <a href="#" class="tags__link">Как пересаживать</a>
+      <a href="#" class="tags__link">Как ухаживать за алоказиями</a>
+      <a href="#" class="tags__link">Как поливать алоказию</a>
+      <a href="#" class="tags__link">Как ухаживать за алоказиями</a>
+      <a href="#" class="tags__link">Как ухаживать за алоказиями</a>
+      <a href="#" class="tags__link">Как ухаживать за алоказиями</a>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <a href="#" class="footer__logo">
+        <img loading="lazy" src="../img/footer-logo.svg" class="image" width="144" height="39" alt="Логотип">
+      </a>
+      <div class="social">
+        <span class="social__text">Мы здесь:</span>
+        <ul class="list-reset social__list">
+          <li class="social__item">
+            <a href="#" target="_blank" class="social__link social__link--tg" aria-label="Телеграм"></a>
+          </li>
+          <li class="social__item">
+            <a href="#" target="_blank" class="social__link social__link--vk" aria-label="Вконтакте"></a>
+          </li>
+          <li class="social__item">
+            <a href="#" target="_blank" class="social__link social__link--yt" aria-label="Youtube"></a>
+          </li>
+          <li class="social__item">
+            <a href="#" target="_blank" class="social__link social__link--rut" aria-label="Rutube"></a>
+          </li>
+          <li class="social__item">
+            <a href="#" target="_blank" class="social__link social__link--dz" aria-label="Дзен"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__inner">
+        <div class="footer__descr">Все права защищены 2023-2025</div>
+        <a href="#" class="footer__descr">Публичная офферта</a>
+        <a href="#" class="footer__descr">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+</body>
+
+</html>
