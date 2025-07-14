@@ -21,21 +21,23 @@
 
 <body class="page__body">
   <div class="site-container">
-    <!-- <header class="header">
+    <header class="header">
   <div class="container">
     <div class="header__wrapper">
       <svg class="header__logo">
         <use xlink:href="img/sprite.svg#logo"></use>
       </svg>
-      <ul class="list-reset header__page-list">
-        <li class="header__page-item">
-          <a href="#" class="header__page-link">про алоказию</a>
-        </li>
-        <li class="header__page-item header__page-item--active">
-          <a href="#" class="header__page-link">купить алоказию</a>
-        </li>
-      </ul>
-      <nav class="nav">
+      <div class="header__page-mobile">
+        <ul class="list-reset header__page-list">
+          <li class="header__page-item header__page-item--active">
+            <a href="#" class="header__page-link">про алоказию</a>
+          </li>
+          <li class="header__page-item">
+            <a href="#" class="header__page-link">купить алоказию</a>
+          </li>
+        </ul>
+      </div>
+      <nav class="nav" data-menu>
         <ul class="list-reset nav__list">
           <li class="nav__item"><a href="#" class="nav__link">пункт меню</a></li>
           <li class="nav__item"><a href="#" class="nav__link">пункт меню</a></li>
@@ -43,6 +45,9 @@
           <li class="nav__item"><a href="#" class="nav__link">пункт меню</a></li>
         </ul>
       </nav>
+      <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+      </button>
       <div class="header__search">
         <div class="search-icon">
           <button class="btn-reset search-icon__btn">
@@ -57,7 +62,6 @@
           </div>
         </div>
       </div>
-
       <div class="social header__social">
         <ul class="list-reset social__list">
           <li class="social__item">
@@ -70,9 +74,23 @@
       </div>
     </div>
   </div>
-</header> -->
+</header>
 
     <main class="main">
+      <div class="container">
+  <nav class="breadcrumbs" aria-label="breadcrumb">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a href="/" class="breadcrumbs__link">Главная</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="/catalog" class="breadcrumbs__link">Статьи</a>
+      </li>
+      <li class="breadcrumbs__item" aria-current="page">Про алоказию</li>
+    </ul>
+  </nav>
+</div>
+
       <section class="market">
   <div class="container">
     <h1 class="market__title">Купить алоказию</h1>
@@ -101,7 +119,6 @@
           <h2 class="market__block-title">Алоказия Полли</h2>
           <span class="market__block-size">12 см</span>
         </div>
-
         <div class="market__price">
           <span class="market__price-text">цена</span>
           <span class="market__price-sum">1 877 ₽</span>
@@ -137,18 +154,22 @@
       </div>
       <div class="market__inn">
         <div class="swiper market-slider">
+
+          <button class="btn-reset market-slider__btn market-slider__prev">
+            <svg>
+              <use xlink:href="img/sprite.svg#left-arrow"></use>
+            </svg>
+          </button>
+          <button class="btn-reset market-slider__btn market-slider__next">
+            <svg>
+              <use xlink:href="img/sprite.svg#right-arrow"></use>
+            </svg>
+          </button>
           <div class="swiper-wrapper">
             <div class="swiper-slide slide-video">
               <a class="market-slider__preview" data-fslightbox href="https://www.youtube.com/embed/cZlGnb6gMJA">
                 <img src="img/video-preview.png" aria-hidden="true" decoding="async" loading="lazy" alt="">
-                <button class="market-slider__play" aria-label="Запустить видео">
-                  <svg width="101" height="100" viewBox="0 0 101 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse opacity="0.8" cx="50.4623" cy="50" rx="50.0013" ry="50" fill="#0D593B" />
-                    <path
-                      d="M70.26 51.498C71.1549 50.9814 71.1549 49.6898 70.26 49.1731L39.052 31.1551C38.1571 30.6385 37.0385 31.2843 37.0385 32.3176L37.0385 68.3535C37.0385 69.3868 38.1571 70.0326 39.052 69.516L70.26 51.498Z"
-                      fill="#D9D9D9" />
-                  </svg>
-                </button>
+                <button class="market-slider__play" aria-label="Запустить видео"></button>
               </a>
             </div>
             <div class="swiper-slide">
@@ -212,7 +233,7 @@
         <span class="social__text">Мы здесь:</span>
         <ul class="list-reset social__list">
           <li class="social__item">
-            <a href="#" target="_blank" class="social__link social__link--tg" aria-label="Телеграм"></a>
+            <a href="#" target="_blank" class="social__link social__link--tg-white" aria-label="Телеграм"></a>
           </li>
           <li class="social__item">
             <a href="#" target="_blank" class="social__link social__link--vk" aria-label="Вконтакте"></a>

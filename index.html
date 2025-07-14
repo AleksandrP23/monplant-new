@@ -21,21 +21,23 @@
 
 <body class="page__body">
   <div class="site-container">
-    <!-- <header class="header">
+    <header class="header header-main">
   <div class="container">
     <div class="header__wrapper">
       <svg class="header__logo">
         <use xlink:href="img/sprite.svg#logo"></use>
       </svg>
-      <ul class="list-reset header__page-list">
-        <li class="header__page-item">
-          <a href="#" class="header__page-link">про алоказию</a>
-        </li>
-        <li class="header__page-item header__page-item--active">
-          <a href="#" class="header__page-link">купить алоказию</a>
-        </li>
-      </ul>
-      <nav class="nav">
+      <div class="header__page-mobile">
+        <ul class="list-reset header__page-list">
+          <li class="header__page-item header__page-item--active">
+            <a href="#" class="header__page-link">про алоказию</a>
+          </li>
+          <li class="header__page-item">
+            <a href="#" class="header__page-link">купить алоказию</a>
+          </li>
+        </ul>
+      </div>
+      <nav class="nav" data-menu>
         <ul class="list-reset nav__list">
           <li class="nav__item"><a href="#" class="nav__link">пункт меню</a></li>
           <li class="nav__item"><a href="#" class="nav__link">пункт меню</a></li>
@@ -43,6 +45,9 @@
           <li class="nav__item"><a href="#" class="nav__link">пункт меню</a></li>
         </ul>
       </nav>
+      <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+      </button>
       <div class="header__search">
         <div class="search-icon">
           <button class="btn-reset search-icon__btn">
@@ -57,7 +62,6 @@
           </div>
         </div>
       </div>
-
       <div class="social header__social">
         <ul class="list-reset social__list">
           <li class="social__item">
@@ -70,7 +74,7 @@
       </div>
     </div>
   </div>
-</header> -->
+</header>
 
     <main class="main">
       <section class="hero">
@@ -227,7 +231,7 @@
         <span class="social__text">Мы здесь:</span>
         <ul class="list-reset social__list">
           <li class="social__item">
-            <a href="#" target="_blank" class="social__link social__link--tg" aria-label="Телеграм"></a>
+            <a href="#" target="_blank" class="social__link social__link--tg-white" aria-label="Телеграм"></a>
           </li>
           <li class="social__item">
             <a href="#" target="_blank" class="social__link social__link--vk" aria-label="Вконтакте"></a>
